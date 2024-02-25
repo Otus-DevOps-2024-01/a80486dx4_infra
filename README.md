@@ -26,3 +26,26 @@ Host OTUS-someinternalhost-appuser
 ```
 - `<bastion-public-ip-address>` - например, 158.160.38.126
 - `<someinternalhost-private-ip-address>` - например, 10.128.0.25 из пула адресов Яндекс
+
+### 5.2. Создание VPN-сервера для YC
+
+Данные для подключения:
+- **_bastion_IP_** - `158.160.40.175`
+- **_someinternalhost_IP_** - `10.128.0.28`
+
+### 5.3. Установка сертификатов для Pritunl
+
+Вход в Pritunl: `https://158.160.40.175.nip.io`
+
+Остановка сервиса:
+1. `systemctl stop pritunl`
+
+Получение сертификатов:
+1. `sudo certbot certonly --standalone --preferred-challenges http -d 158.160.40.175.nip.io`
+
+Команды установки сертификатов:
+1. `pritunl set app.server_cert "$(cat /path/to/cert.pem)"`
+2. `pritunl set app.server_key "$(cat /path/to/privkey.pem)"`
+
+Запуск сервиса:
+1. `systemctl start pritunl`
