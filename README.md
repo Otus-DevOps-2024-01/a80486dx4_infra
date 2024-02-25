@@ -30,8 +30,8 @@ Host OTUS-someinternalhost-appuser
 ### 5.2. Создание VPN-сервера для YC
 
 Данные для подключения:
-- **_bastion_IP_** - `158.160.40.175`
-- **_someinternalhost_IP_** - `10.128.0.28`
+bastion_IP = 158.160.40.175
+someinternalhost_IP = 10.128.0.28
 
 ### 5.3. Установка сертификатов для Pritunl
 
