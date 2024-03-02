@@ -49,3 +49,8 @@ someinternalhost_IP = 10.128.0.28
 
 Запуск сервиса:
 1. `systemctl start pritunl`
+
+### 6.1. Деплой тестовго приложения
+
+testapp_IP = 130.193.51.105
+testapp_port = 9292
