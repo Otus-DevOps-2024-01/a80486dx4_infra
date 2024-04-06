@@ -8,7 +8,9 @@
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
-            "platform_id": "standard-v1"
+            "platform_id": "standard-v1",
+            "subnet_id": "e9bojkkggs4ad7ecbi2o",
+            "use_ipv4_nat": true
         }
     ],
     "provisioners": [
