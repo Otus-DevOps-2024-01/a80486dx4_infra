@@ -25,6 +25,24 @@ resource "yandex_compute_instance" "app" {
         nat = true
     }
 
+    provisioner "file" {
+      source = "files/puma.service"
+      destination = "/tmp/puma.service"
+    }
+
+    provisioner "remote-exec" {
+      script = "files/deploy.sh"
+    }
+
+    connection {
+      type = "ssh"
+      host = yandex_compute_instance.app.network_interface.0.nat_ip_address
+      user = "ubuntu"
+      agent = false
+    #   путь к приватному ключу
+      private_key = file("~/.ssh/id_rsa")
+    }
+
     metadata = {
         ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
     }
