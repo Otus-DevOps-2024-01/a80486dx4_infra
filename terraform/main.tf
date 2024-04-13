@@ -1,9 +1,9 @@
 provider "yandex" {
     # token = ""
-    service_account_key_file = "/home/ubuntu/keys/key.json"
-    cloud_id = ""
-    folder_id = ""
-    zone = "ru-central1-a"
+    service_account_key_file = var.service_account_key_file
+    cloud_id = var.cloud_id
+    folder_id = var.folder_id
+    zone = var.zone
 }
 
 resource "yandex_compute_instance" "app" {
@@ -16,12 +16,12 @@ resource "yandex_compute_instance" "app" {
     boot_disk {
         initialize_params {
             # здесь id образа из предыдущего задания
-            image_id = "fd809rgi7iom8t5av18b"
+            image_id = var.image_id
         }
     }
     network_interface {
         # id подсети default-ru-central1-a
-        subnet_id = "e9bojkkggs4ad7ecbi2o"
+        subnet_id = var.subnet_id
         nat = true
     }
 
@@ -40,10 +40,10 @@ resource "yandex_compute_instance" "app" {
       user = "ubuntu"
       agent = false
     #   путь к приватному ключу
-      private_key = file("~/.ssh/id_rsa")
+      private_key = file(var.private_key_path)
     }
 
     metadata = {
-        ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+        ssh-keys = "ubuntu:${file(var.public_key_path)}"
     }
 }
