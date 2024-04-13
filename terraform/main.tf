@@ -10,7 +10,7 @@ resource "yandex_compute_instance" "app" {
     name = "reddit-app"
 
     resources {
-        cores = 1
+        cores = 2
         memory = 2
     }
     boot_disk {
