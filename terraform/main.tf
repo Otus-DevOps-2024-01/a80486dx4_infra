@@ -24,4 +24,8 @@ resource "yandex_compute_instance" "app" {
         subnet_id = "e9bojkkggs4ad7ecbi2o"
         nat = true
     }
+
+    metadata = {
+        ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+    }
 }
