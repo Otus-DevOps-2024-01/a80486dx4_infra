@@ -285,3 +285,10 @@ __pycahce__/
 
 # My Files
 tmp/
+
+# terraform
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
