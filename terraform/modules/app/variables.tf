@@ -1,4 +1,4 @@
-variable "db_disk_image" {
+variable "app_disk_image" {
   description = "Disk image for reddit db"
   default = "reddit-base-ruby-1713692896"
 }
