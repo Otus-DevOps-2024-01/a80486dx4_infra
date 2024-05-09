@@ -284,6 +284,7 @@ __pycahce__/
 *.py[cod]
 
 # My Files
+.vscode/
 tmp/
 
 # terraform
