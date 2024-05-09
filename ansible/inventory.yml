@@ -1,0 +1,7 @@
+app:
+  hosts:
+    appserver:
+
+db:
+  hosts:
+    dbserver:
