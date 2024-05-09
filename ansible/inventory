@@ -1,2 +1,2 @@
-appserver ansible_host=51.250.69.233 ansible_user=ubuntu ansible_private_key_file=~/.ssh/id_rsa
-dbserver ansible_host=62.84.114.134 ansible_user=ubuntu ansible_private_key_file=~/.ssh/id_rsa
+appserver ansible_host=51.250.69.233
+dbserver ansible_host=62.84.114.134
