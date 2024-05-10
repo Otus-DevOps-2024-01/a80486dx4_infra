@@ -293,3 +293,6 @@ tmp/
 *.tfstate.backup
 *.tfvars
 .terraform/
+
+# Ansible
+*.retry
