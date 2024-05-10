@@ -11,6 +11,7 @@
         dest: /etc/mongod.conf
         mode: 0644
       tags: db-tag  # для запуска отдельной таски по тегу
+      notify: restart mongod
 
   handlers:
   - name: restart mongod
