@@ -297,3 +297,4 @@ tmp/
 # Ansible
 *.retry
 jdauphant.nginx
+vault.key
