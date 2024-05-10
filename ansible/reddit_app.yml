@@ -26,7 +26,7 @@
       template:
         src: templates/db_config.j2
         dest: /home/ubuntu/db_config
-      tags:: app-tag
+      tags: app-tag
 
     - name: enable puma
       become: true
