@@ -286,6 +286,7 @@ __pycahce__/
 # My Files
 .vscode/
 tmp/
+*.zip
 
 # terraform
 *.tfstate
@@ -296,5 +297,5 @@ tmp/
 
 # Ansible
 *.retry
-jdauphant.nginx
+# jdauphant.nginx
 vault.key
