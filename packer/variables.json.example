@@ -1,5 +1,5 @@
 {
     "folder_id": "my_folder",
     "source_image_family": "image_id",
-    "service_account_key_file": "key"
+    "service_account_key_file": "packer/key.json"
 }

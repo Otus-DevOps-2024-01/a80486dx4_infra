@@ -1,0 +1,8 @@
+---
+- name: Configure hosts & deploy application
+  hosts: db
+  # tags: db-tag
+  become: true
+
+  roles:
+    - db
