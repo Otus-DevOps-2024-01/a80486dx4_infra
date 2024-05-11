@@ -299,3 +299,10 @@ tmp/
 *.retry
 # jdauphant.nginx
 vault.key
+
+# Vagrant
+.vagrant/
+*.log
+.molecule
+.cache
+.pytest_cache
